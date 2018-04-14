@@ -46,7 +46,7 @@
     public function Obtener($idProducto)
     {
       try {
-        $stm= $this->pdo->prepare("SELECT * FROM Productos WHERE idProducto =?");
+        $stm= $this->pdo->prepare("SELECT * FROM Producto WHERE idProducto =?");
         $stm->execute(array($idProducto));
         $r = $stm->fetch(PDO::FETCH_OBJ);
 
@@ -67,7 +67,7 @@
     public function Eliminar($idProducto)
     {
       try {
-        $stm= $this->pdo->prepare("SELECT * FROM Productos WHERE idProducto =?");
+        $stm= $this->pdo->prepare("SELECT * FROM Producto WHERE idProducto =?");
         $stm->execute(array($idProducto));
       } catch (Exception $e) {
           die($e->getMessage());
@@ -79,8 +79,8 @@
           $sql = "UPDATE Producto SET
                       Productonombre =?,
                       Productocodigo =?,
-                      historial_idhistorial =?
-                      Productodescripcion =?
+                      historial_idhistorial =?,
+                      Productodescripcion =?,
                       WHERE idProducto = ?";
 
           $this->pdo->prepare($sql)->execute(array(
@@ -97,7 +97,7 @@
     public function Registrar(Producto $data)
     {
       try {
-        $sql = "INSERT INTO Productos (Productonombre, Productocodigo, historial_idhistorial, Productodescripcion)
+        $sql = "INSERT INTO Producto (Productonombre, Productocodigo, historial_idhistorial, Productodescripcion)
         VALUES (?, ?, ?, ?)";
 
         $this->pdo->prepare($sql)->execute(array(
