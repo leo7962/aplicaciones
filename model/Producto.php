@@ -2,12 +2,16 @@
   /**
    * Esta es una clase
    */
-  class Producto
+   require_once ("model/OT.php");
+   require_once ("model/historial.php");
+
+
+  class Producto extends OT
   {
     private int $idProducto;
     private String $Productonombre;
     private int $Productocodigo;
-    private int $historial_idhistorial;
+    private historial $historial_idhistorial;
     private String $Productodescripcion;
 
     public function __GET($k)
