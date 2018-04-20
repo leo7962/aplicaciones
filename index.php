@@ -1,6 +1,10 @@
 <?php
 require_once ("model/Producto.php");
 require_once ("model/ProductoModel.php");
+require_once ("controller/osController.php");
+require_once ("controller/otController.php");
+require_once ("controller/productoController.php");
+require_once ("controller/configuration.php");
 
 //logica
 $prd = new Producto();

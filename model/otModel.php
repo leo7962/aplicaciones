@@ -3,7 +3,7 @@ inclued_once("model/OT.php");
 inclued_once("model/OS.php");
 include_once("model/Producto.php");
 
-class ClassName extends OS
+class productoOT 
 {
   private $pdo;
   public function __construct()

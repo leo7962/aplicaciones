@@ -1,7 +1,7 @@
 <?php
 inclued_once("model/OS.php");
 
-class ClassName
+class productoOS
 {
   private $pdo;
   public function __construct()
