@@ -6,7 +6,7 @@
    require_once ("model/historial.php");
 
 
-  class Producto extends OT
+  class Producto 
   {
     private int $idProducto;
     private String $Productonombre;

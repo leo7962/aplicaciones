@@ -8,7 +8,9 @@
     public $ProductoModel;
     public function __construct()
     {
-      $this->productoModel = new Producto();
+      $controlProduct->productoModel = new Producto();
+      $controlProduct.agregar(idproducto);
+      if
     }
 
   }
